@@ -4,9 +4,11 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "dev": "vinxi dev",
-    "build": "vinxi build",
-    "start": "vinxi start"
+    "dev": "vinxi dev --host",
+    "local": "vinxi dev --port=3001 --host",
+    "build": "echo 'Build started at: ' $(date) && vinxi build && echo 'Build completed at: ' $(date)",
+    "start": "vinxi start --port=8383 --host",
+    "ui": "pnpm dlx shadcn@latest"
   },
   "keywords": [],
   "author": "",
